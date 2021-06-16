@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Docker Commands</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Purple Multiple Forms template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
+<link href="//fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+
+
+
+<script>
+function getOutput() {
+	var xhr = new XMLHttpRequest();
+	var i = document.getElementById("cmd").value
+
+	xhr.open("GET", "http://192.168.43.118/cgi-bin/index.py?x="+i, true);
+	xhr.send();
+
+	xhr.onload = function() {
+		var output = xhr.responseText;
+		document.getElementById("op").innerHTML = output;
+	}
+}
+
+</script>
+
+
+
+
+</head>
+<body>
+	<!-- agileits-main -->
+	<div class="agileits-main"> 
+		<div class="w3lmain-info">	
+			<!-- agileits-main-row-two -->
+			<div class="agileitsmain-row">
+				<div class="profile-w3grid2 w3subscribe">
+					<!-- login form three -->
+					<div class="login-form login-form-three">  
+						<div class="agile-row">
+							<h3>Docker Commands</h3>  
+							
+							<div class="login-agileits-top"> 
+									<div class="input-row">
+										<input type="text" id="cmd" class="user"  placeholder="Commands" required=""/> 
+									</div>	
+									<div class="agileits-row2"></div>
+									
+									<input type="submit" onclick="getOutput();" value="Run Command">
+
+									<p>Output:</p>
+
+							</div> 
+							
+							
+							<pre>
+							<pre id="op" style="color: azure;font-size: 10px;  text-align: justify;"></pre>
+							</pre>								
+
+						</div>  
+					</div>
+					<!-- login form three -->	  
+				</div>
+				<div class="clear"> </div>
+			</div> 
+			  	
+		</div>	
+	</div>	
+
+</body>
+</html>
